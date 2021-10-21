@@ -18,7 +18,7 @@ In this competition we are segmenting neuronal cells in images. The training ann
 
 Note: while predictions are not allowed to overlap, the training labels are provided in full (with overlapping portions included). This is to ensure that models are provided the full data for each object. Removing overlap in predictions is a task for the competitor.
 
-**Files**
+**Files**\
 train.csv - IDs and masks for all training objects. None of this metadata is provided for the test set.
 
 id - unique identifier for object
