@@ -13,3 +13,38 @@ Sartorius is a partner of the life science research and the biopharmaceutical in
 In this competition, you’ll detect and delineate distinct objects of interest in biological images depicting neuronal cell types commonly used in the study of neurological disorders. More specifically, you'll use phase contrast microscopy images to train and test your model for instance segmentation of neuronal cells. Successful models will do this with a high level of accuracy.
 
 If successful, you'll help further research in neurobiology thanks to the collection of robust quantitative data. Researchers may be able to use this to more easily measure the effects of disease and treatment conditions on neuronal cells. As a result, new drugs could be discovered to treat the millions of people with these leading causes of death and disability.
+# Data Description
+In this competition we are segmenting neuronal cells in images. The training annotations are provided as run length encoded masks, and the images are in PNG format. The number of images is small, but the number of annotated objects is quite high. The hidden test set is roughly 240 images.
+
+Note: while predictions are not allowed to overlap, the training labels are provided in full (with overlapping portions included). This is to ensure that models are provided the full data for each object. Removing overlap in predictions is a task for the competitor.
+
+**Files**
+train.csv - IDs and masks for all training objects. None of this metadata is provided for the test set.
+
+id - unique identifier for object
+
+annotation - run length encoded pixels for the identified neuronal cell
+
+width - source image width
+
+height - source image height
+
+cell_type - the cell line
+
+plate_time - time plate was created
+
+sample_date - date sample was created
+
+sample_id - sample identifier
+
+elapsed_timedelta - time since first image taken of sample
+
+sample_submission.csv - a sample submission file in the correct format
+
+train - train images in PNG format
+
+test - test images in PNG format. Only a few test set images are available for download; the remainder can only be accessed by your notebooks when you submit.
+
+train_semi_supervised - unlabeled images offered in case you want to use additional data for a semi-supervised approach.
+
+LIVECell_dataset_2021 - A mirror of the data from the LIVECell dataset. LIVECell is the predecessor dataset to this competition. You will find extra data for the SH-SHY5Y cell line, plus several other cell lines not covered in the competition dataset that may be of interest for transfer learning.
